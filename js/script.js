@@ -1,73 +1,34 @@
 // Arrays are not primitive value types
 // They are reference types
 
-const fruits = ['apple', 'orange', 'kiwi', 'grape'];
+const fruits = ['apple', 'orange', 'kiwi', 'grape', 'banana', 'blueberry', 'strawberry', 'plantain'];
 const data = ['Matt', 'Morgan', 33, '55 Coding Dr', '555-555-5555', ['pickleball', 'fishing']];
 
-// you can put an array within an array (nested array)
+for (let index = 0; index < fruits.length; index++) {
+    console.log(fruits[index]);
+}
 
-// console.log(fruits); // will execute the array as a whole
+const fullName = 'Matt Morgan';
 
-// console.log(fruits[1]); // reference the index using the index number inside []
-
-// console.log(fruits.length); // will execute the length of the array (above example would be 4)
-
-// console.log(data);
-
-// console.log(data[3]); // want address
-
-// console.log(data[5][1]); // accessing a 'nested' array
-
-console.log(fruits);
-
-fruits[2] = 'strawberry';
-
-console.log(fruits);
-
-// increase the data age number by one - console log the original value and the new value after you increase it
-
-console.log(data[2]);
-
-data[2]++;
-
-console.log(data[2]);
+for (let index = 0; index < fullName.length; index++) {
+    console.log(fullName[index]);
+}
 
 
+// arrays are indexed by item
+// strings are indexed by character
 
 
+// fruits.length --> gives you the exact # of items in the 'fruits' array
+// *REMEMBER* arrays start at an index# of 0
 
+// can use 'i' instead of 'index' --> see below
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i]);
+// }
 
+// for (let count = 0; count < 11; count++) {
+//     console.log(count);
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let fullName = 'Matt';
-
-// console.log(fullName);
-
-// fullName += ' Morgan';
-
-// console.log(fullName);
+// *Loops have to finish before continuing onto the next line of code
