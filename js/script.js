@@ -16,17 +16,21 @@ const user = {
         this.age++;
         console.log('Happy Birthday');
     },
-    addHobby: function() {
+    addHobby: function(hobby) {
         // Need to reference an argument that is passed to addHobby (string of a hobby)
-        user.info.hobbies.push('surfing');
+        this.info.hobbies.push(hobby);
         // Push the argument (hobby) to the info.hobbies array
     },
     printHobbies: function() {
         // console.log the hobbies array
-        console.log(user.info.hobbies[2]);
+        console.log(this.info.hobbies);
         // BONUS - loop over the hobbies array and console.log each hobby
-        for (let index = 0; index < user.info.hobbies.length; index++) {
-            console.log(user.info.hobbies[index]);
+        for (let index = 0; index < this.info.hobbies.length; index++) {
+            console.log(this.info.hobbies[index]);
+        }
+
+        for (let hobby of this.info.hobbies) {
+            console.log(hobby);
         }
     }
 };
@@ -35,7 +39,7 @@ const user = {
 
 // user.printAge();
 
-user.addHobby();
+user.addHobby('surfing');
 
 user.printHobbies();
 
@@ -51,3 +55,10 @@ user.printHobbies();
 // console.log(user.age);
 
 // console.log(user.info.hobbies[1]);
+
+
+function test(hobby, age) {
+    console.log(hobby + age);
+}
+
+test('tennis', 10);
