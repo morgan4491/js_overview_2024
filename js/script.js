@@ -4,6 +4,7 @@ const image = document.querySelector('#main-image'); // example of calling the C
 const noteOutput = document.querySelector('.output');
 const timerDisplay = document.querySelector('#time');
 const timerBtn = document.querySelector('#start-btn');
+const resetBtn = document.querySelector('#reset-btn');
 
 
 console.log(header.innerText);
@@ -56,5 +57,14 @@ timerBtn.addEventListener('click', function() {
         }, 1000);
 
         started = true;
+    }
+});
+
+resetBtn.addEventListener('click', function() {
+    if (!started && count < 10) {
+        clearInterval(timer);
+        timerDisplay.innerText = 'Time: 10';
+        count = 10;
+        started = false;
     }
 });
