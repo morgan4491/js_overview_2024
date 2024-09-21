@@ -36,6 +36,7 @@ noteOutput.insertAdjacentHTML('beforeend', `
 
 let count = 10;
 let started = false;
+let timer;
 
 
 
@@ -53,7 +54,6 @@ timerBtn.addEventListener('click', function() {
                 count = 10;
                 started = false;
             }
-        
         }, 1000);
 
         started = true;
@@ -61,10 +61,8 @@ timerBtn.addEventListener('click', function() {
 });
 
 resetBtn.addEventListener('click', function() {
-    if (!started && count < 10) {
-        clearInterval(timer);
-        timerDisplay.innerText = 'Time: 10';
-        count = 10;
-        started = false;
-    }
+    clearInterval(timer);
+    timerDisplay.innerText = 'Time: 10';
+    count = 10;
+    started = false;
 });
