@@ -5,6 +5,7 @@ const noteOutput = document.querySelector('.output');
 const timerDisplay = document.querySelector('#time');
 const timerBtn = document.querySelector('#start-btn');
 const resetBtn = document.querySelector('#reset-btn');
+const stopBtn = document.querySelector('#stop-btn');
 
 
 console.log(header.innerText);
@@ -64,5 +65,11 @@ resetBtn.addEventListener('click', function() {
     clearInterval(timer);
     timerDisplay.innerText = 'Time: 10';
     count = 10;
+    started = false;
+});
+
+
+stopBtn.addEventListener('click', function() {
+    clearInterval(timer);
     started = false;
 });
