@@ -13,14 +13,16 @@ const notes = [];
 //         <h3>new note text</h3>
 //         <p>Added On: 9/20/2024</p>
 //     </article>
-// `); // Note that tat in order to do a 'Template Literal' (i.e writing the HTML you want to insert in the HTML doc format), you DO NOT USE quotations ('' or ""), you have to use the 'backtick' (`) which is the same key on the keyboard as the tilda (~) or next to the number 1
+// `); // Note that in order to do a 'Template Literal' (i.e writing the HTML you want to insert in the HTML doc format), you DO NOT USE quotations ('' or ""), you have to use the 'backtick' (`) which is the same key on the keyboard as the tilda (~) or next to the number 1
 
-function outputNotes(arrayOfNotes) { // 'arrayOfNotes' is a new parameter being passed through the outputNotes function, which is defined below
+function outputNotes(arrayOfNotes) { // 'arrayOfNotes' is a new parameter being defined here - it can be named ANYTHING, but holds the 'value' of the 'notesArray' that we defined below in the 'addNoteBtn'. The 'arrayOfNotes' parameter (holding the value from 'notesArray') is referenced in the 'for-of' loop
 
     noteOutput.innerHTML = '';
 
-    for (const noteObj of arrayOfNotes) { // This 'for-of' loop loops over the 'arrayOfNotes'
+    for (const noteObj of arrayOfNotes) { // This 'for-of' loop loops over the 'arrayOfNotes' (this is the array of objects ('notesArray') that was created below during the gatherNotes function) and makes a new const of 'noteObj'
         
+
+    // noteOuput inserts the text into the HTML file. Since this is inside of the for-of loop, this action is repeated for every item (in this case every object) in the array. We grab the title, textContent and date from each object (the object is an item in the array), one item at time, until we have gone through every item
         noteOutput.insertAdjacentHTML('beforeend', `
             <article class="border border-light-subtle p-2 rounded-2 text-black-50 mb-3">
                 <h3>${noteObj.title}</h3>
