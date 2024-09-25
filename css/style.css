@@ -1,0 +1,8 @@
+.dark {
+    background: #777;
+    color: #fff;
+}
+
+.dark header h3 {
+    color: orange;
+}
